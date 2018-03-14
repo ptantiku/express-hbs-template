@@ -1,0 +1,35 @@
+<h1>Home page</h1>
+
+<h2>Test If Equal (special helpers)</h2>
+{{#eq 'a' 'a'}}
+  <span>equal</span>
+{{else}}
+  <span>not equal</span>
+{{/eq}}
+
+<h2>Test (normal) If</h2>
+{{#if data}}
+  <h3>Test loop using each</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Index</th>
+        <th>id</th>
+        <th>name</th>
+        <th>email</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{#each data}}
+      <tr>
+        <td>{{@index}}</td>
+        <td>{{id}}</td>
+        <td>{{name}}</td>
+        <td>{{email}}</td>
+      </tr>
+    {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  No data.
+{{/if}}
